@@ -2,11 +2,11 @@
 C# code in visual studio code
 
 ===============================
-mkdir first_csharp
-cd first_csharp
-dotnet new
-dotnet restore
+mkdir first_csharp <br>
+cd first_csharp <br>
+dotnet new <br>
+dotnet restore <br>
 
-//edit code etc.
+//edit code etc. <br>
 
-dotnet run
+dotnet run <br>
