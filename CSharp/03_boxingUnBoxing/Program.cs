@@ -22,6 +22,7 @@ namespace ConsoleApplication
                 else if(item is bool) Console.WriteLine("A Boolean");
             }
 
+            
             //To print out individually, we need to cast
         }
     }
