@@ -8,21 +8,21 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {   
-            System.Console.WriteLine("Print 1-255");
+            System.Console.WriteLine("\n__________Print 1-255__________");
             for (int i = 1; i < 256; i++) System.Console.Write(i + ",") ;
             
-            System.Console.WriteLine("\n\n Print odd numbers between 1-255");
+            System.Console.WriteLine("\n\n__________Print odd numbers between 1-255__________");
             for (int i = 1; i < 256; i+=2) System.Console.Write(i + ",") ;
 
-            System.Console.WriteLine("\n\n Print Sum (Using List/Linq syntax)");
+            System.Console.WriteLine("\n\n__________Print Sum (Using List/Linq syntax)__________");
             System.Console.WriteLine(Enumerable.Range(0, 255).Sum());
 
-            System.Console.WriteLine("\n\n Iterating through an Array");
+            System.Console.WriteLine("\n\n__________Iterating through an Array__________");
             int[] myArray = {1, 3, 5, 7, 9, 13};
             foreach (int number in myArray) System.Console.Write(number + ",");
             
 
-            System.Console.WriteLine("\n\nFind Max, Average, Array with Odd Numbers, Greater than Y, Square the Values, Eliminate Negative Numbers, Shifting the values in an array: \n");
+            System.Console.WriteLine("\n\n__________Find Max, Average, Array with Odd Numbers, Greater than Y, Square the Values, Eliminate Negative Numbers, Shifting the values in an array__________ ");
             int[] numbers = {1, 3, -4, 7, 6};
             arraySolve(numbers, 1);
             shiftValue(numbers);
