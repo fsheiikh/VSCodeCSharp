@@ -6,16 +6,15 @@ namespace ConsoleApplication
 {
     public class Human
     {
-        public string name;
-
-        //The { get; set; } format creates accessor methods for the field specified
-        //This is done to allow flexibility
+        public string name { get; set; }
         public int health { get; set; }
 
-        //These properties are all private
-        public int strength { get; set; }
-        public int intelligence { get; set; }
-        public int dexterity { get; set; }
+        //These properties are all protected
+        protected int strength { get; set; }
+        protected int intelligence { get; set; }
+        protected int dexterity { get; set; }
+
+        public static int SamuraiCount {get; set;}
 
         public Human(string person)
         {
@@ -47,7 +46,5 @@ namespace ConsoleApplication
                 enemy.health -= strength * 5;
             }
         }
-
-        public static int SamuraiCount {get; set;}
     }
 }

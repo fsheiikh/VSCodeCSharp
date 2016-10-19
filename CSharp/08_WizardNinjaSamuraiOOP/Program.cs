@@ -8,7 +8,7 @@ namespace ConsoleApplication
         {
             Ninja naruto = new Ninja("Naruto");
 
-            System.Console.WriteLine(naruto.strength);
+            System.Console.WriteLine(naruto.name);
 
             Samurai jack = new Samurai("jack");
             jack.howMany();

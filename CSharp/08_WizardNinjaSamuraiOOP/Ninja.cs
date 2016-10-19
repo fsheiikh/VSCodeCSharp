@@ -6,10 +6,11 @@ using System.Linq;
 namespace ConsoleApplication
 {
     public class Ninja : Human
-    {
+    {     
+
         public Ninja(String name) : base(name)
         {
-            dexterity = 175;
+           dexterity = 175;
         }
 
         public void steal(object someone)

@@ -6,9 +6,8 @@ namespace ConsoleApplication
 {
    public class Samurai : Human
    {    
-
        public Samurai(string name) : base(name)
-       {
+       {    
            health = 200;
            Human.SamuraiCount++;
        }
