@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>Hello</title>
+    </head>
+    <body>
+        <h1>Hello from the HTML file!</h1>
+        <p>@ViewBag.x</p>
+        <form action="/formsubmitted" method="post">
+        <input type="text" name="Username"/>
+        </form>
+
+    </body>
+</html>
