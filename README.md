@@ -1,5 +1,6 @@
 # VSCodeCSharp
 C# code in visual studio code
+https://docs.asp.net/en/latest/getting-started.html
 
 ===============================
 mkdir first_csharp <br>
