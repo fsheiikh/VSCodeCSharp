@@ -1,5 +1,5 @@
---temp-output:/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/obj/Debug/netcoreapp1.0/
---out:/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/bin/Debug/netcoreapp1.0/DotNetMVCTemplate.dll
+--temp-output:/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/obj/Debug/netcoreapp1.0/
+--out:/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/bin/Debug/netcoreapp1.0/02_DojoSurvey.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -8,7 +8,7 @@
 --suppress-warning:CS1705
 --optimize:False
 --emit-entry-point:True
---output-name:DotNetMVCTemplate
+--output-name:02_DojoSurvey
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -160,7 +160,7 @@
 --reference:/Users/mainUser/.nuget/packages/System.Threading.Timer/4.0.1/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/mainUser/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/mainUser/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
---resource:"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/obj/Debug/netcoreapp1.0/DotNetMVCTemplatedotnet-compile.deps.json",DotNetMVCTemplate.deps.json
-/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/Program.cs
-/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/Startup.cs
-/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/Controllers/HelloController.cs
+--resource:"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/obj/Debug/netcoreapp1.0/02_DojoSurveydotnet-compile.deps.json",02_DojoSurvey.deps.json
+/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/Program.cs
+/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/Startup.cs
+/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/Controllers/SurveyController.cs

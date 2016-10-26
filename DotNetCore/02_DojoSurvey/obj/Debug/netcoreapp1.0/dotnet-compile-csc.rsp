@@ -7,8 +7,8 @@
 -debug:portable
 -nostdlib
 -nologo
-"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/obj/Debug/netcoreapp1.0/dotnet-compile.assemblyinfo.cs"
--out:"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/bin/Debug/netcoreapp1.0/DotNetMVCTemplate.dll"
+"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/obj/Debug/netcoreapp1.0/dotnet-compile.assemblyinfo.cs"
+-out:"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/bin/Debug/netcoreapp1.0/02_DojoSurvey.dll"
 -r:"/Users/mainUser/.nuget/packages/Microsoft.AspNetCore.Antiforgery/1.0.0/lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll"
 -r:"/Users/mainUser/.nuget/packages/Microsoft.AspNetCore.Authorization/1.0.0/lib/netstandard1.3/Microsoft.AspNetCore.Authorization.dll"
 -r:"/Users/mainUser/.nuget/packages/Microsoft.AspNetCore.Cors/1.0.0/lib/netstandard1.3/Microsoft.AspNetCore.Cors.dll"
@@ -156,7 +156,7 @@
 -r:"/Users/mainUser/.nuget/packages/System.Threading.Timer/4.0.1/ref/netstandard1.2/System.Threading.Timer.dll"
 -r:"/Users/mainUser/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll"
 -r:"/Users/mainUser/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll"
--resource:"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/obj/Debug/netcoreapp1.0/DotNetMVCTemplatedotnet-compile.deps.json",DotNetMVCTemplate.deps.json
-"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/Program.cs"
-"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/Startup.cs"
-"/Users/mainUser/Desktop/Csharp/DotNetCore/DotNetMVCTemplate/Controllers/HelloController.cs"
+-resource:"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/obj/Debug/netcoreapp1.0/02_DojoSurveydotnet-compile.deps.json",02_DojoSurvey.deps.json
+"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/Program.cs"
+"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/Startup.cs"
+"/Users/mainUser/Desktop/Csharp/DotNetCore/02_DojoSurvey/Controllers/SurveyController.cs"

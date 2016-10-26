@@ -15,10 +15,28 @@ namespace YourNamespace.Controllers
   public IActionResult Index()
   {
    ViewBag.x = DateTime.Now;
+   List<string> listOfStrings = new List<string>();
+       listOfStrings.Add("Item1");
+       listOfStrings.Add("Item2");
+       listOfStrings.Add("Item3");
+
+
+   ViewBag.list = listOfStrings;
+
    return View();
    //OR
    return View("Index");
-   //Both of these returns will render the same view
+
   }
+
+  [HttpPost]
+  [Route("method")]
+  public IActionResult Method(string TextField, int NumberField)
+  {
+    System.Console.WriteLine(TextField + "" + NumberField);
+
+    return View("Index");
+  }
+
  }
 }

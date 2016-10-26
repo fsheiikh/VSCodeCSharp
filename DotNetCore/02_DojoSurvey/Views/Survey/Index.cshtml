@@ -13,8 +13,8 @@
 
         <script>
             $(document).ready(function(){
-                $("input").addClass("form-control");
-                $("input").after("</br>")
+                $("input, select").addClass("form-control");
+                $("input, select").after("</br>")
                 $("input").each(function(){
                     //console.log(document.form1[0].name)
                     $(this).attr( "placeholder", $(this).attr("name")); //sets the placeholder to the text of the name attribute
@@ -25,37 +25,41 @@
         <style>
             h1, h2, h3, h4, h5, h6, p { text-align: center;
                                         font-family: 'Varela Round', sans-serif;}
+            h1 {color: white;}
+            body {background-color: #d7d7d7}
         </style>
     </head>
-    <body>
+    <body><br><br>
         <div class="container">
-            <h1>Hello ASP.NET Mvc(Template)! <br>@ViewBag.x</h1>
+            <nav class="navbar navbar-inverse">
+                <h1>Dojo Survey C#</h1>
+            </nav>
+            
 
-            <form action="method" method="post" name="form1">
-                <input type="text" name="TextField"/>
-                <input type="number" step="1" name="NumberField"/>
-                <button type="submit">Submit</button>
+            <form action="survey" method="post" name="form1">
+                 <label for="Name">Your Name:</label><input type="text" name="Name"/>
+
+                 <label for="Location">Location</label><select name="Location">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="DC">DC</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                </select>
+
+                <label for="Language">Language</label><select name="Language">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                </select>
+
+                <label for="comment">Comment:</label>
+                <textarea name="Comment" class="form-control" rows="5"></textarea><br>
+
+                <button class="btn btn-info">Submit</button>
             </form>
-
-           @{
-                foreach(string Current in ViewBag.list)
-                {
-                    <p>@Current</p>
-                    @if(Current == "Item1")
-                    {
-                        <h3>Header check</h3>
-                    }
-                        
-                }
-            }
-
             
-            
-            @{
-                string DisplayString = "I'm a local string!";
-            }
-
-            <p>@DisplayString</p>            
+          
         </div>
     </body>
 </html>
