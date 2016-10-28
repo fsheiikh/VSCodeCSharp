@@ -25,7 +25,7 @@ namespace YourNamespace.Controllers
 
    return View();
    //OR
-   return View("Index");
+   //return View("Index");
 
   }
 
@@ -39,4 +39,37 @@ namespace YourNamespace.Controllers
   }
 
  }
+
+    // TempData["Variable"] = "Hello World";
+
+    // HttpContext.Session.SetString("Key", "Value");
+    // ...
+    // HttpContext.Session.GetString("Key");
+    // ...
+    // HttpContext.Session.SetInt32("OtherKey", 123);
+    // ...
+    // HttpContext.Session.GetInt32("OtherKey");
+
+    // HttpContext.Session.Clear();
+
+
+
+
+    //examples of redirecting
+    // public IActionResult Method()
+    // {
+    // return RedirectToAction("OtherMethod", new {parameter = "this is a string"});
+    // }
+
+    // [HttpGet]
+    // [Route("other/{parameter}")]
+    // public IActionResult OtherMethod(string parameter)
+    // {
+    
+    // }
+
+    // public IActionResult Method()
+    // {
+    // return RedirectToAction("OtherMethod", "OtherController", new {parameter = "this is a string"});
+    // }
 }

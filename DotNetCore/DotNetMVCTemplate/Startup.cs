@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
-
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 
 namespace YourNamespace
 {
@@ -9,6 +10,7 @@ namespace YourNamespace
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSession();
         }
 
         public void Configure(IApplicationBuilder App)
@@ -25,6 +27,7 @@ namespace YourNamespace
             // });
 
              App.UseMvc();
+             App.UseSession();
         }
     }
 

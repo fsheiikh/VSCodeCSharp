@@ -1,0 +1,78 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .building {border: 5px solid black;
+        display: inline-block;
+        width: 200px;
+        margin: 30px;
+        border-radius: 10px;
+        background-color: #d7d8cd;
+        vertical-align: top;}
+    .building img {width: 50px;
+                   height: 50px;}
+    button {border-radius: 50%}
+    .total {border: 2px solid black;
+            border-radius: 10px;
+            margin-left: 40px;
+            background-color: black;
+            width: 100px;
+            color: white;
+            height: 60px;}
+    .activities {border: 1px solid black;
+                border-radius: 10px;
+                height: 200px;
+                overflow: scroll;}
+    .r {color : red;}
+    .g {color : green;}
+</style>
+<h1>Ninja Gold .Net MVC</h1>
+
+<div class="total">
+    <h5>Your Gold:</h5>
+    <h5>@ViewBag.total</h5>
+</div>
+
+<div class="building">   
+    <h3>Farm</h3><hr><br>
+    <p><img src="http://www.iconarchive.com/download/i95818/iconsmind/outline/Cow.ico" alt=""></p>
+    <h6>(earns 10-20 golds)</h6><br>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="farm" />
+        <p><button class="btn btn-info">Find Gold</button> </p><br>
+    </form>    
+</div> 
+
+<div class="building">   
+    <h3>Cave</h3><hr><br>
+    <p><img src="http://icons.iconarchive.com/icons/icons8/ios7/128/Travel-Cave-icon.png" alt=""></p>
+    <h6>(earns 5-10 golds)</h6><br>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="cave" />
+        <p><button class="btn btn-warning">Find Gold</button> </p><br>
+    </form>    
+</div>
+
+<div class="building">   
+    <h3>House</h3><hr><br>
+    <p><img src="http://iconshow.me/media/images/ui/Streamline-Icon/png/128/38-home-house-streamline.png" alt=""></p>
+    <h6>(earns 2-5 golds)</h6><br>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="house" />
+        <p><button class="btn btn-danger">Find Gold</button> </p><br>
+    </form>    
+</div>
+
+<div class="building">   
+    <h3>Casino</h3><hr><br>
+    <p><img src="https://cdn4.iconfinder.com/data/icons/casino-glyph/500/casino-Glyph-08-128.png" alt=""></p>
+    <h6>(earns/takes 0-50 golds)</h6><br>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="casino" />
+        <p><button class="btn btn-success">Find Gold</button> </p><br>
+    </form>    
+</div> 
+
+<div class="activities">
+    @Html.Raw(@ViewBag.list)
+</div> 
