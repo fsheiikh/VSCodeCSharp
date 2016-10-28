@@ -11,14 +11,11 @@ namespace ninjaGold.Controllers
 {   
     public class HomeController : Controller
     {   
-        //List<string> log = new List<string>();
-        // public int total {get; set;}
-
         [HttpGet]
         [Route("/")]
         public IActionResult Index()
         {   
-            if(HttpContext.Session.GetInt32("Total") == null) HttpContext.Session.SetInt32("Total", 0);
+            if(HttpContext.Session.GetInt32("Total") == null) HttpContext.Session.SetInt32("Total", 0); //check to see if exists, if not set to 0
 
             ViewBag.total = HttpContext.Session.GetInt32("Total");
             ViewBag.list += HttpContext.Session.GetString("Temp") + "<br>";
@@ -31,7 +28,7 @@ namespace ninjaGold.Controllers
         public IActionResult Method(string building)
         {   
             int temp = getGolds(building);
-            getLog(temp); //sets the session string based on each gold increment
+            setLog(temp); //sets the session string based on each gold increment
 
             HttpContext.Session.SetInt32("Total", temp + Convert.ToInt32(HttpContext.Session.GetInt32("Total"))); //total = total + temp
 
@@ -39,7 +36,7 @@ namespace ninjaGold.Controllers
             
         }
 
-        public int getGolds(string building)
+        public int getGolds(string building) 
         {   Random random = new Random();
             if(building == "farm") return random.Next(10, 21);
             else if(building == "cave") return random.Next(5, 11);
@@ -47,7 +44,7 @@ namespace ninjaGold.Controllers
             else return random.Next(-50, 51);
         }
 
-        public void getLog(int temp)
+        public void setLog(int temp)
         {   
             string log = (temp >= 0) ? 
                 String.Format("<h4 class='g'>Earned {0} Golds at " + DateTime.Now + "</h4> ", temp) : 
