@@ -56,5 +56,13 @@ namespace ninjaGold.Controllers
             HttpContext.Session.SetString("Temp", HttpContext.Session.GetString("Temp") + "" + log);
 
         }
+
+        [HttpGet]
+        [Route("/reset")]
+        public IActionResult Reset()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
 }
