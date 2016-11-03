@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Random Word Generator .Net MVC</h1>
+<h3>@ViewBag.word</h3>
+
+<h6>
+<form action="/generate" method="post">
+    <button class="btn btn-warning">Generate</button>
+</form>
+</h6>
