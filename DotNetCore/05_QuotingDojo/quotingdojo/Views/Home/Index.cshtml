@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Quoting Dojo</h1>
+<form action="quote" method="post">
+    Name: <input class="form-control" type="text" name="name">
+    Quote: <input class="form-control" type="text" name="comment"><br>
+    <button class="btn btn-success">Add Quote</button>
+
+</form><br><br>
+
+
+@{
+
+    foreach(var q in ViewBag.Quotes)
+    {
+        <div class="quote">
+            @q.name said: <br>
+            "@q.comment" <br>
+            at: @q.created_at
+            <form action="/quotes/delete/@q.Id" method="post">
+                <button class="btn btn-warning">Delete</button>
+            </form>
+        </div><br>
+    }
+}
