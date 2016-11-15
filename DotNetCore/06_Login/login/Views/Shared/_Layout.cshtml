@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Registration .Net MVC</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication</title>
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script>
+            $(document).ready(function(){
+                $("input").addClass("form-control");
+                $("button").addClass("btn btn-info")
+                $("input").after("</br>")
+                $("input").each(function(){
+                    //console.log(document.form1[0].name)
+                    $(this).attr( "placeholder", $(this).attr("name")); //sets the placeholder to the text of the name attribute
+                })
+            })
+
+        </script>
+        <style>
+            h1, h2, h3, h4, h5, h6, p { text-align: center;
+                                        font-family: 'Varela Round', sans-serif;}
+        </style>
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+        </script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

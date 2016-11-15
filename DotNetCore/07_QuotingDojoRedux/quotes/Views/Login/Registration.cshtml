@@ -1,0 +1,22 @@
+<h1>Registration</h1>
+
+<form action="register" method="post">
+    <input type="text" name="name">
+    <input type="text" name="email">
+    <input type="text" name="password">
+    <input type="text" name="confirm_password">
+    <button type="submit">Register</button>
+</form>
+<div>
+    @{
+        foreach(var error in ViewBag.Errors)
+            {
+                //If there are any errors for a field...
+                if(@error.Errors.Count > 0)
+                {
+                    // We show the first error for that field
+                    <p>@error.Errors[0].ErrorMessage</p>
+                }
+            }
+    }
+</div>

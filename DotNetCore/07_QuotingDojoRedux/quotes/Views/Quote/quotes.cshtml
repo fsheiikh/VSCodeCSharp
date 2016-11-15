@@ -1,0 +1,47 @@
+<h4>Quote Page</h4>
+
+
+<form action="addquote" method="post">
+    <input type="text" name="quote">
+    <input type="hidden" name="user_id" value=@ViewBag.ID>
+    <button type="submit">Add Quote</button>
+</form>
+<div>
+    @{  if(ViewBag.Errors != null) {
+            foreach(var error in ViewBag.Errors)
+            {
+                //If there are any errors for a field...
+                if(@error.Errors.Count > 0)
+                {
+                    // We show the first error for that field
+                    <p>@error.Errors[0].ErrorMessage</p>
+                }
+            }
+
+         }
+        
+    }
+</div>
+
+
+<div>
+    @{  
+        foreach(var q in ViewBag.quotes)
+        {       
+             <div class="well">
+                 <p>Quote: @q.quote</p>
+                 <p>Name: @q.user.name</p>
+                 <p>Date: @q.created_at</p>
+
+                 @if(@q.user_id == @ViewBag.ID)
+                 {
+                     <form action="quotes/delete/@q.Id" method="post">
+                        <button class="btn btn-danger">Delete</button>
+                     </form>
+                 }
+                 
+            </div>
+        }
+    }
+   
+</div>
